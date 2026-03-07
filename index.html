@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracker</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#F8FAFC] h-screen flex items-center">
+    <!-- login page -->
+    <section class="w-130 mx-auto">
+      <fieldset
+        class="fieldset bg-[#Ffffff] border-base-300 rounded-box border p-8 shadow-md"
+      >
+        <img
+          src="./assets/github-logo.png"
+          alt="GitHub Logo"
+          class="mb-4 mx-auto"
+        />
+        <h2 class="text-2xl font-medium text-center">GitHub Issues Tracker</h2>
+        <p class="text-[16px] font-normal text-center">
+          Sign in to manage your issues
+        </p>
+
+        <label class="fieldset-legend">Username</label>
+        <input id="userInput"
+          type="text"
+          class="input w-full border-gray-300 focus:outline-offset-0"
+          placeholder="admin"
+        />
+        <p class="text-blue-700">Default : admin</p>
+
+        <label class="fieldset-legend">Password</label>
+        <input id="userPin"
+          type="password"
+          class="input w-full border-gray-300 focus:outline-offset-0"
+          placeholder="admin123"
+        />
+        <p class="text-blue-700">Default : admin123</p>
+
+        <button id="loginBtn"
+         class="btn btn-primary mt-4">Login</button>
+
+        <div class="divider">OR</div>
+
+        <p class="text-center text-[16px] font-medium">Demo Credentials:</p>
+        <ul class="bg-slate-50 p-5 rounded-lg shadow-md text-center">
+          <li class="text-[16px]">
+            <span class="font-medium">Username</span> : admin
+          </li>
+          <li class="text-[16px]">
+            <span class="font-medium">Password</span> : admin123
+          </li>
+        </ul>
+      </fieldset>
+
+      <!-- or section -->
+      <div></div>
+    </section>
+
+    <!-- script file -->
+     <script src="./src/login.js"></script>
+  </body>
+</html>
