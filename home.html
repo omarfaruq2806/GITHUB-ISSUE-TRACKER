@@ -23,24 +23,39 @@
         <h2 class="text-xl font-bold ml-2">GitHub Issues Tracker</h2>
       </div>
       <div class="flex gap-4">
-        <input type="search" placeholder="Search issues..." class="input" />
-        <button class="btn btn-primary">Primary</button>
+        <input id="searchInput" type="search" placeholder="Search issues..." class="input" />
+        <button id="searchBtn" class="btn btn-primary">SEARCH</button>
       </div>
     </header>
 
     <!-- tab section -->
     <div
-      class="flex gap-4 px-6 py-4 bg-white shadow-sm min-w-80 max-w-250 mx-auto mt-6 rounded-lg"
+      class="flex gap-4 px-6 py-4 bg-white shadow-sm min-w-80 max-w-260 mx-auto mt-6 rounded-lg"
     >
-      <a href="" class="btn bg-blue-500 text-white border w-30">ALL</a>
-      <a href="" class="btn bg-white border w-30">OPEN</a>
-      <a href="" class="btn bg-white border w-30">CLOSED</a>
+      <a
+        id="tab-all"
+        onclick="tabSwitch('all')"
+        class="btn bg-blue-500 text-white border w-30"
+        >ALL</a
+      >
+      <a
+        id="tab-open"
+        onclick="tabSwitch('open')"
+        class="btn bg-white border w-30"
+        >OPEN</a
+      >
+      <a
+        id="tab-closed"
+        onclick="tabSwitch('closed')"
+        class="btn bg-white border w-30"
+        >CLOSED</a
+      >
     </div>
 
     <!-- issue count -->
     <section>
       <div
-        class="flex justify-between items-center gap-4 px-6 py-4 bg-white shadow-sm min-w-80 max-w-250 mx-auto mt-6 rounded-lg"
+        class="flex justify-between items-center gap-4 px-6 py-4 bg-white shadow-sm min-w-80 max-w-260 mx-auto mt-6 rounded-lg"
       >
         <div class="flex gap-4">
           <img
@@ -66,10 +81,20 @@
           </div>
         </div>
       </div>
-      <!-- cards -->
+      <!--all cards -->
       <div
         id="cardContainer"
-        class="p-4 grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 min-w-80 max-w-250 mx-auto"
+        class="p-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 min-w-80 max-w-260 mx-auto"
+      ></div>
+      <!-- open issues -->
+      <div
+        id="openIssues"
+        class="p-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 min-w-80 max-w-260 mx-auto"
+      ></div>
+      <!-- closed issues -->
+      <div
+        id="closedIssues"
+        class="p-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6 min-w-80 max-w-260 mx-auto"
       ></div>
     </section>
 
