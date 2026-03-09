@@ -108,7 +108,7 @@ fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
       const card = document.createElement("div");
 
       card.innerHTML = `
-        <div
+        <div onclick="my_modal_1.showModal();loadModalData(${data.id})" 
           class="p-4 space-y-4 rounded-xl border-t-4 ${data.status == "open" ? "border-green-500" : "border-purple-500"} bg-white shadow-sm"
         >
           <div class="flex justify-between items-center">
@@ -147,7 +147,7 @@ fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues").then((res) =>
         const card = document.createElement("div");
 
         card.innerHTML = `
-        <div
+        <div onclick="my_modal_1.showModal();loadModalData(${data.id})"
           class="p-4 space-y-4 rounded-xl border-t-4 ${data.status == "open" ? "border-green-500" : "border-purple-500"} bg-white shadow-sm"
         >
           <div class="flex justify-between items-center">
@@ -187,7 +187,7 @@ fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues").then((res) =>
         const card = document.createElement("div");
 
         card.innerHTML = `
-        <div
+        <div onclick="my_modal_1.showModal();loadModalData(${data.id})"
           class="p-4 space-y-4 rounded-xl border-t-4 ${data.status == "open" ? "border-green-500" : "border-purple-500"} bg-white shadow-sm"
         >
           <div class="flex justify-between items-center">
@@ -217,9 +217,6 @@ fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues").then((res) =>
   }),
 );
 
-// display details with a modal
-function showDetails(data) {}
-
 // spinner loading
 function showSpinner(boolean) {
   const spinner = document.getElementById("spinner");
@@ -244,4 +241,24 @@ function updateCounts() {
   } else if (currentTab == "closed") {
     issueCount.innerText = counts.closed;
   }
+}
+
+// display details with a modal
+function loadModalData(id) {
+  const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`;
+  // console.log(id);
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalAssignee = document.getElementById("modalAssignee");
+  const modalPriority = document.getElementById("modalPriority");
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((respons) => {
+      const data = respons.data;
+      modalTitle.innerText = data.title;
+      modalDescription.innerText = data.description;
+      modalAssignee.innerText = data.assignee;
+      modalPriority.innerText = data.priority;
+    });
 }
