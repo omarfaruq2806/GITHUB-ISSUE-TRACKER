@@ -22,7 +22,8 @@ This project is designed to simulate GitHub’s issue tracking system where user
 - Static deployment with GitHub Pages
 
 ## 📦 Dependencies Used
-This project does not use external dependencies or frameworks.
+Tailwind CSS CDN (for styling)
+Vanilla JavaScript (no external JS libraries)
 
 ## 💻 Run Locally
 
