@@ -1,35 +1,32 @@
- 1️⃣ What is the difference between var, let, and const?
+# 🚀 GitHub Issue Tracker
 
-    var: function-scoped, re-declare & re-assign possible .
-    let: block-scoped, re-assign possible, re-declare impossible .
-    const: block-scoped, re-assign impossible, re-declare impossible .
+GitHub Issue Tracker is a responsive web application built with HTML, CSS, and JavaScript that helps users manage and monitor issues in a clean and user-friendly interface.
 
+## 🔗 Live Website
+https://omarfaruq2806.github.io/GITHUB-ISSUE-TRACKER/
 
-2️⃣ What is the spread operator (...)?
+## 📌 Project Overview
+This project is designed to simulate GitHub’s issue tracking system where users can view and manage issue-related information through a modern and responsive interface.
 
-    Array/Object কে আলাদা element copy  করে
-    example : 
-    const arr1 = [ 1 , 2 , 3 ];
-    const arr2 = [...arr1, 4]; 
-    clg(arr2); //output ; 1,2,3,4 |
+## 🛠 Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages
 
+## ✨ Main Features
+- Clean issue tracker interface
+- Responsive layout
+- Modern UI design
+- Smooth user experience
+- Static deployment with GitHub Pages
 
-3️⃣ What is the difference between map(), filter(), and forEach()?
+## 📦 Dependencies Used
+This project does not use external dependencies or frameworks.
 
-    map() loop করে নতুন array return করে 
-    filter() loop করে শর্ত পূরণ করা element গুলো নিয়ে নতুন array return করে
-    forEach() loop করে , কোনো return করে না , শুধু iterate করে |
+## 💻 Run Locally
 
+Clone the project
 
-4️⃣ What is an arrow function?
-
-    এটি ES6 এর fiture ,
-    function keyword বাদ দিয়ে লেখা হয় | 
-
-
-5️⃣ What are template literals?
-
-    ES6 এর fiture, এটা backticks (`) দিয়ে লেখা হয়
-    Variable বা expression সরাসরি  ব্যবহার করে ${} embed করা যায়
-    Multiline string বানানো যায় |
-
+```bash
+git clone https://github.com/omarfaruq2806/GITHUB-ISSUE-TRACKER.git
